@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Kalam';
+    src: url(/Kalam-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(/UbuntuCondensed-Regular.ttf);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #242424;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+
+    padding: 20px 0;
+    margin: 20px;
+    background-color: #555555;  
+    border-radius: 10px;
+
+    color: aliceblue;
+    box-shadow: 0 0 20px #00000088;
+}
+
+main ul {
+    list-style-type: none;
+    font-size: 1.5em;
+    width: 90%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 1vw;
+}
+
+main li {
+    background-color: #ff5566;
+    width: 20vw;
+    height: 20vh;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin: 15px 10px;
+
+    color: aliceblue;
+    box-shadow: 0 8px 10px #00000066;
+    border: #00000000 4px solid;
+
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.5), background-color 0.2s ease-in-out;  
+}
+
+main li:hover {
+    background-color: #ff5566;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 40px #ff5566bb;
+
+    z-index: 1;
+    border: #fc6a79 4px solid;
+
+    cursor: pointer;
+}
