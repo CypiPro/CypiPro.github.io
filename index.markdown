@@ -4,8 +4,9 @@
 
 layout: home
 title: Home
-permalink: /home/
+permalink: /
 
+list_title: Recent Posts
 ---
 
 ### Small title
@@ -19,3 +20,4 @@ def test():
 test()
 # >> Hello World!
 ```
+---
