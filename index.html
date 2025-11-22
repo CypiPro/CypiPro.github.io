@@ -45,6 +45,12 @@ code {
   white-space: nowrap;
 }
 </style></p>
+<div class="admonition check">
+<p class="admonition-title">Update 22.11 - 01:28</p>
+<p>Poprawna struktura (htree) [43]<br>
+Rozszerzona definicja wątku [21]<br>
+Podziękowania dla: Mirosław Kłak</p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">1. Która z poniższych definicji najlepiej opisuje system operacyjny?</p>
 <p>System jest pośrednikiem między sprzętem a użytkownikiem. Odpowiada także za efektywne zarządzanie zasobami i zapewnianie środowiska wykonawczego dla programów.</p>
@@ -209,8 +215,13 @@ code {
 </div>
 <div class="admonition question">
 <p class="admonition-title">21. Wątki w ramach jednego procesu zwykle:</p>
-<p>IDFK ლ(ꗞロꗞლ)<br>
-Współdzielą segment pamięci zawierający instrukcje programu (zazwyczaj read-only).</p>
+<p>Wątek to jednostka wykonania w ramach procesu. Wątki tego samego procesu współdzielą przestrzeń adresową i zasoby, ale mają własne liczniki rozkazów i stosy.</p>
+<ul>
+<li>Współdzielona pamięć procesu</li>
+<li>Lżejsze przełączanie kontekstu</li>
+<li>Efektywna komunikacja między wątkami</li>
+<li>Wymagana synchronizacja dostępu</li>
+</ul>
 </div>
 <div class="admonition question">
 <p class="admonition-title">22. Który mechanizm IPC jest jednokierunkowy i typowo łączy procesy spokrewnione?</p>
@@ -369,7 +380,7 @@ Współdzielą segment pamięci zawierający instrukcje programu (zazwyczaj read
 </div>
 <div class="admonition question">
 <p class="admonition-title">43. Która struktura przyspiesza wyszukiwanie w dużych katalogach systemu ext4?</p>
-<p>Ekstenty?</p>
+<p>Katalog przechowuje pary (nazwa, i-węzeł). W ext4 stosuje się strukturę <mark>htree</mark> (hashed B-tree) dla dużych katalogów, przyspieszając wyszukiwanie z O(n) do O(log n).</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">44. Jaką rolę pełnią wskaźniki pośrednie, podwójnie pośrednie i potrójnie pośrednie w inode?</p>
