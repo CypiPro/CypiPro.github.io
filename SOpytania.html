@@ -24,13 +24,17 @@
     
       <div class="crossnote markdown-preview  ">
       
+<div class="admonition quote">
+<p class="admonition-title">Pomoc</p>
+<p>Patryk Przybyło</p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">1.1 Wyjaśnić zadania sterownika maszyny wirtualnej, urządzeń wirtualnych, sterowników urządzeń.</p>
 <p>¯\_(◕ᗜ◕)_/¯</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">1.2 Opisać krótko proces przydzielania zasobów w systemach PnP.</p>
-<p>乁(⍜‿⍜)ㄏ</p>
+<p>Kiedy uruchamiany jest system, sterownik konfiguracji uruchamia moduły wyliczające, które tworzą listę zasobów sprzętowych i wypełniają ja informacjami z rejestru systemu. Następnie sterownik konfiguracji używa modułów przydzielających zasoby, w celu ustalenia prawidłowej konfiguracji systemu.</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">1.3 Podać różnice między statycznym a dynamicznym urządzeniem.</p>
@@ -114,7 +118,36 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">3.3 Omówić związki między maszyną wirtualną, katalogiem stron, tablicami stron, deskryptorami stron.</p>
-<p>(੭のᗜの)੭̸* ✩  ⁺  ˚ <sup>huj</sup> <sup>wie</sup> <sup>⭐</sup></p>
+<p>Każda strona posiada deskryptor strony, który określa jej położenie w pamięci fizycznej oraz prawa dostępu.<br>
+Deskryptory stron są grupowane przez system w struktury nazywane tablicami stron.<br>
+Adresy tablic stron przechowywane są w strukturze nazywanej katalogiem stron.<br>
+Każda maszyna wirtualna posiada odrębny katalog stron.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Struktura</th>
+<th style="text-align:left">co zawiera?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Maszyna wirtualna</td>
+<td style="text-align:left">jeden katalog stron</td>
+</tr>
+<tr>
+<td style="text-align:left">Katalog stron</td>
+<td style="text-align:left">wiele tablic stron</td>
+</tr>
+<tr>
+<td style="text-align:left">Tablica stron</td>
+<td style="text-align:left">wiele deskryptorów stron</td>
+</tr>
+<tr>
+<td style="text-align:left">Deksryptor strony</td>
+<td style="text-align:left">jedna strona</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="admonition question">
 <p class="admonition-title">3.4 Omówić sposób interpretacji przez system liniowego adresu w wirtualnej przestrzeni adresowej procesu (bity oraz ich znaczenie).</p>
@@ -218,6 +251,7 @@
 <p>Z punktu widzenia klienta potok jest plikiem, do któego można zapisywać i czytac dane. Operację zapisu do potoku może rozpocząć zarówno klient jak i serwer.</p>
 <p>Prostszym sposobem na korzystanie z potoków jest użycie systemu transakcji który łączy operację zapisu i odczytu w pojedynczą operację sieciową.</p>
 <p>Serwer potoku musi być uruchomiony na maszynie z systemem Windows NT (lub Windows NT Workstation).</p>
+<p>Nazwa potoku nazwanego, musi być postaci: <code>\\[nazwa komputera]\pipe\[nazwa potoku]</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">5.3 Omówić skrzynki pocztowe (format nazwy, operacje serwera, operacje klienta, ograniczenia)</p>
@@ -225,6 +259,7 @@
 <p>Klient skrzynki pocztowej może wysłać wiadomość do skrzynki na komputerze lokalnym, zdalnym, lub wszystkich skrzynek o takiej samej nazwie na wszystkich komputerach w domenie lub grupie roboczej.</p>
 <p>Serwer skrzynki pocztowej może odczytywać wiadomości przechowywane w swojej skrzynce.</p>
 <p>Serwer skrzynki pocztowej może pracować z systemem Windows 95.</p>
+<p>Nazwa skrzynki pocztowej, musi być postaci: <code>\\[nazwa komputera]\mailslot\[scieżka]\[nazwa]</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">5.4 Omówić bezpieczeństwo komunikacji między procesami.</p>
