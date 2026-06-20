@@ -1,0 +1,1151 @@
+<!DOCTYPE html><html><head>
+      <title>Sieci Komputerowe</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag:not(.token){display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}.scrollbar-style::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<blockquote>
+<p>Wszelka teoria dotycząca urządzeń sieciowych odnosi się głównie do implementacji Alcatel-Lucent wykorzystywanej w ramach wykładu.</p>
+</blockquote>
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h1 id="spis-treści">Spis treści </h1>
+<ul>
+<li><a href="#spis-tre%C5%9Bci">Spis treści</a></li>
+<li><a href="#zaliczenie">Zaliczenie</a></li>
+<li><a href="#redundancja">Redundancja</a></li>
+<li><a href="#model-isoosi">Model ISO/OSI</a>
+<ul>
+<li><a href="#zalety-modelu">Zalety modelu</a></li>
+<li><a href="#warstwa-aplikacji">Warstwa aplikacji</a></li>
+<li><a href="#warstwa-prezentacji">Warstwa prezentacji</a></li>
+<li><a href="#warstwa-sesji">Warstwa sesji</a></li>
+<li><a href="#warstwa-transportowa">Warstwa transportowa</a></li>
+<li><a href="#warstwa-sieciowa">Warstwa sieciowa</a></li>
+<li><a href="#warstwa-%C5%82%C4%85cza-danych">Warstwa łącza danych</a>
+<ul>
+<li><a href="#podwarstwy-%C5%82%C4%85cza-danych">Podwarstwy łącza danych</a></li>
+</ul>
+</li>
+<li><a href="#warstwa-fizyczna">Warstwa fizyczna</a></li>
+</ul>
+</li>
+<li><a href="#wst%C4%99p-do-adresacji">Wstęp do adresacji</a></li>
+<li><a href="#adresacja-ipv4">Adresacja IPv4</a></li>
+<li><a href="#adresacja-ipv6">Adresacja IPv6</a></li>
+<li><a href="#parametry-sieci">Parametry sieci</a></li>
+<li><a href="#definicje-poj%C4%99%C4%87">Definicje pojęć</a></li>
+<li><a href="#spanning-tree-protocol">Spanning Tree Protocol</a>
+<ul>
+<li><a href="#problemy-p%C4%99tli-topologicznych">Problemy pętli topologicznych:</a></li>
+</ul>
+</li>
+<li><a href="#projektowanie-sieci-komputerowych">Projektowanie sieci komputerowych</a></li>
+<li><a href="#media-transmisyjne">Media transmisyjne</a></li>
+<li><a href="#protoko%C5%82y-sieciowe">Protokoły sieciowe</a></li>
+<li><a href="#topologie">Topologie</a></li>
+<li><a href="#%C5%9Bwiat%C5%82owody">Światłowody</a>
+<ul>
+<li><a href="#zalety-%C5%9Bwiat%C5%82owod%C3%B3w">Zalety światłowodów</a></li>
+<li><a href="#zagro%C5%BCenia-dla-w%C5%82%C3%B3kien-%C5%9Bwiat%C5%82owodowych">Zagrożenia dla włókien światłowodowych</a></li>
+<li><a href="#%C5%82%C4%85czenie-%C5%9Bwiat%C5%82owod%C3%B3w">Łączenie światłowodów</a></li>
+</ul>
+</li>
+<li><a href="#routing">Routing</a>
+<ul>
+<li><a href="#brama-sieciowa">Brama sieciowa</a></li>
+<li><a href="#wielokrotne-trasy">Wielokrotne trasy</a></li>
+<li><a href="#routing-statyczny">Routing statyczny</a></li>
+<li><a href="#routing-dynamiczny">Routing dynamiczny</a></li>
+</ul>
+</li>
+<li><a href="#normy-okablowania">Normy okablowania</a>
+<ul>
+<li><a href="#problemy">Problemy</a></li>
+</ul>
+</li>
+<li><a href="#inne">Inne</a>
+<ul>
+<li><a href="#porty-prze%C5%82%C4%85czniki">Porty (przełączniki)</a></li>
+<li><a href="#porty-sieciowe">Porty (sieciowe)</a>
+<ul>
+<li><a href="#typy-port%C3%B3w">Typy portów</a></li>
+<li><a href="#magistrale">Magistrale</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#zadania">Zadania</a>
+<ul>
+<li><a href="#pe%C5%82ne-pytania">Pełne pytania</a></li>
+<li><a href="#urywki-pyta%C5%84">Urywki pytań</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="zaliczenie">Zaliczenie </h1>
+<p>Egzamin I termin - 23.06, 10:00 A61<br>
+Egzamin II termin - 07.07, 10:00 A61</p>
+<p>Należy przynieść papier kancelaryjny (A3 zgięty na pół) oraz legitymację / dowód osobisty.<br>
+Na egzaminie nie można mieć kalkulatora.</p>
+<p>Zaliczenie będzie się składało z 3 pytań (0-1 pkt. ale można dostać nawet 0.01). Aby zdać należy zdobyć 1.5 punkta.</p>
+<p>Odpowiedzi powinny być obszerne (nie dwuzdaniowe), ale zgodne z pytaniem. Ściany tekstu nie na temat zostają skreślane.</p>
+<h1 id="redundancja">Redundancja </h1>
+<p><strong>Architektura redundantna</strong> zapewnia ciągłość działania systemu mimo awarii sprzętowych. W urządzeniach klasy enterprise realizuje się ją przez nadmiarowość kluczowych komponentów (zasilacze, wentylatory, kontrolery). Stosuje się tu model <strong>N+k</strong>, gdzie system działa poprawnie nawet przy jednoczesnej awarii <strong>k</strong> modułów (zazwyczaj N+1).</p>
+<p>Przełączniki w praktyce oprócz sprzętowej redundancji implementują również nadmiarowość systemową w postaci dedykowanych folderów dla różnych konfiguracji:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Katalog</th>
+<th style="text-align:left">Zastosowanie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/running</code></td>
+<td style="text-align:left">Przechowuje aktualnie wykorzystywaną konfigurację systemu. Żadne z wprowadzanych zmian nie są zachowywane przy ponownym uruchomieniu urządzenia.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/working</code></td>
+<td style="text-align:left">Przechowuje główną konfigurację systemu. Wszelkie zmiany zapisane do tego katalogu zostają wczytane do <code>/running</code> po ponownym uruchomieniu urządzenia.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/certified</code></td>
+<td style="text-align:left">Przechowuje sprawdzoną konfigurację systemu z której urządzenie może zostać uruchomione w razie problemów z konfiguracją <code>/working</code>. Domyślnie istnieje <code>timeout</code> po którym system automatycznie przełącza się do konfiguracji <code>/certified</code> w przypadku braku jego manualnego zatrzymania.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="model-isoosi">Model ISO/OSI </h1>
+<p>Model OSI opisuje drogę jaką muszą przebyć dane zaczynając od danych generowanych przez określoną aplikację w obrębie jednej stacji roboczej, a kończąc na aplikacjach stacji drugiej.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model ISO/OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">warstwa aplikacji</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa prezentacji</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa sesji</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa transportowa</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa sieciowa</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa łącza danych</td>
+</tr>
+<tr>
+<td style="text-align:left">warstwa fizyczna</td>
+</tr>
+</tbody>
+</table>
+<p>Model ISO/OSI opisuje <strong>system otwarty</strong>, tzn. system rozproszony w obrębie którego mogą działać urządzenia i oprogramowanie pochodzące od różnych producentów.</p>
+<p>System otwarty realizuje swoje zadania za pomocą określonych funkcji pogrupowanych w podsystemy. Grupy systemów wraz z ich podsystemami oferującymi takie same funkcje łączy się w warstwy.</p>
+<p>W obrębie warstw mogą istnieć elementy aktywne nazywane obiektami. Obiekty istniejące w ramach tylko jednej warstwy nazywamy parametrami.</p>
+<p>Dane wędrując poprzez poszczególne warstwy OSI zmieniają swój format, co nazywamy enkapsulacją.</p>
+<p>Każda warstwa ma określone zadania do zrealizowania, jednak charakterystycznym zadaniem jakie musi wykonać każda warstwa (bez ostatniej) jest przygotowanie danych do przyjęcia i obsługi przez warstwy wyższe.</p>
+<p>ISO/OSI opisuje model.<br>
+TCP/IP to specyficzna implementacja modelu.</p>
+<hr>
+<h3 id="zalety-modelu">Zalety modelu </h3>
+<ul>
+<li>wsparcie dla projektowania protokołów routingu</li>
+<li>wspieranie konkurencji wśród producentów sprzętu</li>
+<li>interoperacyjność urządzeń</li>
+<li>zmiana protokołu / działania jednaj warstwy nie wpływa na pozostałe</li>
+</ul>
+<hr>
+<h3 id="warstwa-aplikacji">Warstwa aplikacji </h3>
+<p>Umożliwia komunikację pomiędzy stacją roboczą w sieci, a człowiekiem z niej korzystającym. Na tym poziomie rezydują procesy sieciowe przeznaczone dla użytkowników tj. współużytkowanie plików, buforowanie zadań wydruków, poczta elektroniczną, czy zarządzanie bazą danych.</p>
+<p>Zdefiniowane są role procesów oraz aplikacje przesyłające fane przez sieć:<br>
+DNS, Telnet, SSH, HTTP, SFTP.</p>
+<p>Wsparcie dla mechanizmów gromadzenia danych. Architektura klient-serwer lub systemy równoważne.</p>
+<hr>
+<h3 id="warstwa-prezentacji">Warstwa prezentacji </h3>
+<p>Wsparcie dla kodów sterujących, specjalnych znaków graficznych i zestawów znaków. Tłumaczenie danych w dół, definiowanie ich formatu oraz odpowiedniej składni (specyfikacja OSI-RM), aby niższe warstwy otrzymały dane w konkretnym formacie niezależnie od aplikacji.</p>
+<p>Jeżeli chodzi o transmisję w górę warstwa prezentacji tłumaczy dane tak aby były one zgodne z wewnętrznym systemem interpretowania znaków.</p>
+<p>Kompresja, szyfrowanie, deszyfrowanie i serializacja danych</p>
+<hr>
+<h3 id="warstwa-sesji">Warstwa sesji </h3>
+<p>Umożliwia połączenie między aplikacjami i odpowiednią wymianę danych poprzez synchronizację tych aplikacji. Decyduje o nawiązaniu / przerwaniu połaczenia oraz może odzyskiwać dane poprzez ponowne ich przesłanie.</p>
+<p>Przykłady protokołów: NFS, SQL, RPC, ASP.</p>
+<hr>
+<h3 id="warstwa-transportowa">Warstwa transportowa </h3>
+<p>Odpowiada za logiczną komunikację pomiędzy hostami. Zaimplementowana jest najczęściej u nadawcy i odbiorcy a nie w sieci.</p>
+<p>Komunikacja połączeniowa i bezpołączeniowa (TCP, UDP) (analogia listu poleconego i zwykłego). Zajmuje się przesyłaniem pakietów, dba o poprawne przesyłanie i sprawdza ich jakość.</p>
+<p>Kontrola błędów transportu. Pozycjonuje informacje według priorytetów i przydziela im pasma do transmisji.</p>
+<p>Określa sposób segmentacji danych pochodzących z warstwy aplikacji oraz enkapsulacji wymaganej dla każdej porcji danych. Zapewnia obsługę portów.</p>
+<p>Warstwa transportowa używa kilku aplikacji a jednocześnie serwisu transmisyjnego.</p>
+<p>Naprawia błędy popełnione przez warstwę sieci. Zapewnia pewne połączenie.</p>
+<hr>
+<h3 id="warstwa-sieciowa">Warstwa sieciowa </h3>
+<p>Zajmuje się routingiem, tzn. decyduje jaką trasą fizyczną mają być wysyłane konkretne pakiety. W tej warstwie funkcjonują pakiety i adresy oraz realizowany jest routing.</p>
+<p>Warstwa ta nie rozróżnia mediów transmisyjnych.</p>
+<p>Protokoły zaimplementowane na warstwie sieci: IPv4, IPv6, AppleTalk, Novell IPX</p>
+<hr>
+<h3 id="warstwa-łącza-danych">Warstwa łącza danych </h3>
+<p>Zapewnia niezawodność łącza oraz posiada mechanizmy naprawiające błędy ramek i pakietów tak, aby były one zgodne ze standardem (enkapsulacja pakietów z warstwy sieciowej)</p>
+<p>Warstwa jest odpowiedzialna za wymianę ramek pomiędzy węzłami poprzez medium fizycznej sieci. Umożliwia uzyskanie dostępu wyższym warstwom do medium, używając do tego celu procesu znanego jako ramkowanie.</p>
+<p>Kontroluje jak dane są umieszczane i pobierane z medium używając algorytmów kontroli dostępu do medium i detekcji błędów.</p>
+<p>MAC address jest unikalnym adresem (numerem seryjnym) karty sieciowej. Każdy adres MAC ma długość <code>6B</code> (<code>48b</code>) i jest przedstawiany w zapisie heksadecymalnym:</p>
+<ul>
+<li><code>3B</code> - kod producenta</li>
+<li><code>3B</code> - unikalny identyfikator karty</li>
+</ul>
+<h4 id="podwarstwy-łącza-danych">Podwarstwy łącza danych </h4>
+<ul>
+<li>
+<p>Logical Link Control<br>
+Umieszcza w ramce informacje identyfikujące który protokół warstwy sieciowej jest enkapsulowany w ramce. Informacja ta pozwala wielu protokołom warstwy 3 (np. IPX i IP) wykorzystywać te same sieciowe interfejsy i media.<br>
+<br></p>
+</li>
+<li>
+<p>Media Acess Control</p>
+</li>
+</ul>
+<hr>
+<h3 id="warstwa-fizyczna">Warstwa fizyczna </h3>
+<p>Dostarcza metody do przesyłania przez konkretne medium bitów tworzących ramkę warstwy łącza danych. Zadaniem warstwy fizycznej jest wytworzenie sygnału elektrycznego, świetlnego lub mikrofalowego, który będzie reprezentował bity.</p>
+<hr>
+<h1 id="wstęp-do-adresacji">Wstęp do adresacji </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Adresy prywatne</th>
+<th style="text-align:left">Adresy publiczne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Nie muszą być rejestrowane</td>
+<td style="text-align:left">Są przypisywane przez usługodawce internetowego</td>
+</tr>
+<tr>
+<td style="text-align:left">Mogą być przypisywane przez administratora sieci</td>
+<td style="text-align:left">Mają unikatowe składniki zależne od klasy</td>
+</tr>
+<tr>
+<td style="text-align:left">Są używane na komputerach niedostępnych z Internetu</td>
+<td style="text-align:left">Występują w ograniczonej liczbie</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Brama domyślna</strong> kieruje pakiety do innych sieci. Jest używana wtedy, gdy w wewnętrznej tabeli routingu hosta nie ma żadnych informacji na temat podsieci docelowej.</p>
+<p><strong>DHCP</strong> automatycznie dostarcza klientowi adres IP bramy.<br>
+<strong>MAC</strong> działa na jednej podsieci.<br>
+<strong>VLSM</strong> Variable Length Subnet Mask.</p>
+<p>Agregacja adresów (nadsieci) - przeciwieństwo wydzielania "podsieci", maska zamiast się zwiększać - pomniejsza się.</p>
+<hr>
+<h1 id="adresacja-ipv4">Adresacja IPv4 </h1>
+<p>IPv4 zdefiniowany przez IETF. Jest protokołem warstwy sieciowej OSI, należy do stosu protokołów TCP/IP.</p>
+<p>Jednostką danych tego protokołu (PDU) jest datagram lub <strong>pakiet</strong>. Protokół bezpołączeniowy, nie sprawdza poprawności dostarczenia pakietów do miejsca przeznaczenia.</p>
+<p>Identyfikacja hostów w IPv4 opiera się o adresy IP.</p>
+<p>Adres IP to 32 bitowa liczba zapisywana w formie czterech 8 bitowych członów. W praktyce używa się zapisu dziesiętnego (0-255) np. 192.152.22.10.</p>
+<p>Klasyfikacja adresów IP (historyczna):</p>
+<ul>
+<li>klasa <strong>A</strong> - "duża sieć", 1B sieci i 3B hosta, adresy sieci z przedrostkiem <code>0...</code></li>
+<li>klasa <strong>B</strong> - "średnia sieć", 2B sieci i 2B hosta, adresy sieci z przedrostkiem <code>10...</code></li>
+<li>klasa <strong>C</strong> - "mała sieć", 3B sieci i 1B hosta, adresy sieci z przedrostkiem <code>110...</code></li>
+<li>klasa <strong>D</strong> - multicast</li>
+<li>klasa <strong>E</strong> - adresy zarezerwowane</li>
+</ul>
+<p>Komunikacja sieciowa może być przeprowadzana jako:</p>
+<ul>
+<li>Unicast (1 do 1)</li>
+<li>Broadcast (1 do N ale tylko na przestrzeni jednej sieci)</li>
+<li>Multicast</li>
+</ul>
+<p>Maski podsieci pozwalają na odróżnianie identyfikatora hosta od identyfikatora sieci:</p>
+<ul>
+<li>bity 1 wskazują, że dany bit adresu odpowiada identyfikatorowi sieci</li>
+<li>bity 0 wskazują, że dany bit adresu odpowiada identyfikatorowi hosta</li>
+</ul>
+<p>Zasady adresów IP:</p>
+<ul>
+<li>Nie należy wprowadzać numeru <code>127</code> jako identyfikatora sieci</li>
+<li>Adresów publicznych należy używać tylko w uzasadnionych przypadkach</li>
+<li>Adresy prywatne powinny zgadzać się z zakresami IANA</li>
+<li>Identyfikatora hosta w sieci nie należy określać jako same jedynki / same zera</li>
+<li>Nie należy duplikować identyfikatorów hostów</li>
+</ul>
+<p>W sieci mającej <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> bitów adresu hosta jest <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2^n - 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7477em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> adresów użytkowych.</p>
+<p>Ogólna charakterystyka IPv4:</p>
+<ul>
+<li>
+<p>Bezpołączeniowy<br>
+Przed przesyłem danych nie jest zestawiane połączenie<br>
+<br></p>
+</li>
+<li>
+<p>Działa na zasadzie dostępnych możliwości<br>
+Protokół nie posiada mechanizmów zapewniających gwarancję dostarczenia pakietu<br>
+<br></p>
+</li>
+<li>
+<p>Niezależny od używanego medium<br>
+Pracuje niezależnie od medium użytego do transportu danych.</p>
+</li>
+</ul>
+<hr>
+<h1 id="adresacja-ipv6">Adresacja IPv6 </h1>
+<p>Cechy adresacji IPv6:</p>
+<ul>
+<li>Istnieje <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>128</mn></msup></mrow><annotation encoding="application/x-tex">2^{128}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">128</span></span></span></span></span></span></span></span></span></span></span></span> adresów</li>
+<li>Hierarchiczna adresacja</li>
+<li>Stateless i stateful auto konfiguracja</li>
+<li>Bezpieczeństwo</li>
+<li>Prosty format nagłówka</li>
+<li>Brak adresów rozgłoszeniowych (istnieją adresy multicast)</li>
+<li>QoS (Quality of Service)</li>
+</ul>
+<p>Adres IPv6 składa się z <strong>128 bitów</strong> podzielonych na 16-bitowe bloki zapisywane heksadecymalnie.<br>
+Z adresów eliminowane są ciągi zer (<code>:0000:</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> <code>:0:</code>, <code>:0002:</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> <code>:2:</code>). Ciągłe sekwencje zer można zastąpić podwójnym dwukropkiem (<code>:0:0:0:2</code> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> <code>::2</code>).</p>
+<p>Grupy adresów IPv6:</p>
+<ul>
+<li>globalne adresy unicastowe</li>
+<li>adresy link-local <code>FG80</code></li>
+<li>adresy site-local</li>
+<li>unikalne lokalne adresy unicastowe IPv6</li>
+<li>adresy specjalne</li>
+</ul>
+<p>Adresy multicastowe IPv6: <code>FF {flagi 4B} {zakres 4B} {ID grupy 112B}</code><br>
+Flagi:</p>
+<ul>
+<li><code>0</code> stały</li>
+<li><code>1</code> tymczasowy</li>
+</ul>
+<p>Zakres:</p>
+<ul>
+<li><code>0</code> zarezerwowany</li>
+<li><code>1</code> node-local</li>
+<li><code>2</code> link-local</li>
+<li><code>5</code> site-local</li>
+<li><code>8</code> organization-local</li>
+<li><code>E</code> globalny</li>
+</ul>
+<p>Adresy węzłów <code>OX1</code><br>
+Adresy routerów <code>OX2</code><br>
+Adresy loopback <code>::1</code><br>
+Dual layer vs dual stack Architecture</p>
+<hr>
+<h1 id="parametry-sieci">Parametry sieci </h1>
+<p><strong>Liczba węzłów</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span></span></span></span> jest zdefiniowana jako <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>V</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">N = |V|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mord">∣</span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span></span></span></span> to zbiór węzłów).</p>
+<p><strong>Stopień wierzchołka</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> oznaczany jako <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">d_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to liczba węzłów przyległych do danego wierzchołka <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>. Maksymalna wartość stopnia <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">d_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> oznaczana jako <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>max</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><msub><mi>d</mi><mi>i</mi></msub><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">d = \max \left(d_i\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span> to stopień grafu.</p>
+<p>Topologia jest <strong>regularna</strong> gdy stopień wszystkich wierzchołków jest równy.</p>
+<p>Topologia jest <strong>kompletna</strong> gdy między każdą parą wierzchołków istnieje połaczenie.</p>
+<p><strong>Całkowita liczba połączeń</strong></p>
+<p class="math"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mfrac><msub><mi>d</mi><mi>i</mi></msub><mn>2</mn></mfrac><mtext>  </mtext><mtext>&nbsp;w&nbsp;topologiach&nbsp;nieregularnych</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>N</mi><mfrac><mi>d</mi><mn>2</mn></mfrac><mtext>  </mtext><mtext>&nbsp;w&nbsp;topologiach&nbsp;regularnych</mtext></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">L = \begin{cases}
+    \sum\limits^{n-1}_{i=0} \frac{d_i}{2} \; \text{ w topologiach nieregularnych} \\[1.5em]
+    N\frac{d}{2} \; \text{ w topologiach regularnych}
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.8731em;vertical-align:-2.1866em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.65em;"><span style="top:-1.9em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-1.892em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.616em;width:0.8889em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.8889em" height="0.616em" style="width:0.8889em" viewBox="0 0 888.89 616" preserveAspectRatio="xMinYMin"><path d="M384 0 H504 V616 H384z M384 0 H504 V616 H384z"></path></svg></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.292em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.616em;width:0.8889em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.8889em" height="0.616em" style="width:0.8889em" viewBox="0 0 888.89 616" preserveAspectRatio="xMinYMin"><path d="M384 0 H504 V616 H384z M384 0 H504 V616 H384z"></path></svg></span></span><span style="top:-4.9em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6866em;"><span style="top:-4.6866em;"><span class="pstrut" style="height:3.5011em;"></span><span class="mord"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5011em;"><span style="top:-2.1223em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span><span style="top:-3.95em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8962em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">&nbsp;w&nbsp;topologiach&nbsp;nieregularnych</span></span></span></span><span style="top:-1.7466em;"><span class="pstrut" style="height:3.5011em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">&nbsp;w&nbsp;topologiach&nbsp;regularnych</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1866em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p><p><strong>Połączeniowość</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mi>L</mi><msub><mi>L</mi><mrow><mi>k</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{L}{L_{k(N)}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.476em;vertical-align:-0.6036em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.109em;">N</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3695em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.6036em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, gdzie <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mrow><mi>K</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">L_{K(N)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0385em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0715em;">K</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.109em;">N</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span> oznacza liczbę krawędzi w grafie zupełnym o tej samej strukturze.</p>
+<p><strong>Średnica</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span></span></span></span> to minimalna odległość między maksymalnie oddalonymi wierzhołkami.<br>
+Limit średnicy dla STP to 7.</p>
+<p><strong>Spójność węzłowa</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span></span></span></span> jest minimalną liczbą węzłów których usunięcie w rezultacie daje graf niespójny.</p>
+<p><strong>Spójność krawędziowa</strong> oznaczona przez <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span> jest minimalną liczbą krawędzi których usunięcie w rezultacie daje graf niespójny. (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo separator="true">,</mo><mi>λ</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">K, \lambda \ge 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>)</p>
+<p><strong>Skalowalność</strong> to zdolność danej struktury do zachowania niezmienionych właściwości topologicznych przy jednoczesnym zwiększeniu liczby wierzchołków. Warunki konieczne do spełnienia:</p>
+<ul>
+<li>Zwiększenie liczby węzłów nie powoduje zwiększenie stopnia sieci</li>
+<li>Możliwe jest dodanie węzłów bez konieczności zmieniania istniejącej strukruy</li>
+<li>Możliwe jest skalowanie struktury do dowolnej wartości <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span></span></span></span></li>
+</ul>
+<h1 id="definicje-pojęć">Definicje pojęć </h1>
+<p><strong>Spójność informacyjna</strong> to cecha systemu informatycznego dzięki której każdy z jego użytkowników ma dostęp do jedynych i tych samych informacji.</p>
+<p>"The AAA of information":</p>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Accounting</li>
+</ul>
+<p><strong>Protokół</strong> powoduje nadmiarowość informacji przesyłanej, zmniejszając efektywność komunikacji.</p>
+<ul>
+<li>Protokoły deterministyczna gwarantują dostarczenie danych w określonym czasie, osiągając to kosztem ogólnej przepustowości.</li>
+<li>Protokoły probabilistyczne nie gwarantują dostarczenia w określonym czasie, jednak mogą wykorzystać większą przepustowość.</li>
+</ul>
+<p><strong>Protokolizmem</strong> określa się zjawisko jednoczesnego wykorzystania w jednej i tej samej strukturze informatycznej wielu różnych niekompatybilnych ze sobą protokołów.</p>
+<p><strong>Systemem homogenicznym</strong> nazywamy system oparty o elementy wykorzystujące tą samą architekturę systemowo-sprzętową. W <strong>systemach heterogenicznych</strong> takie wymaganie nie jest stawiane.</p>
+<p><strong>Dane</strong> to zbiór znaków, natomiast <strong>informacja</strong> to odpowiednio zinterpretowane dane.</p>
+<p>Dane można podzielić ze względu na:</p>
+<ol>
+<li>reprezentowaną informację
+<ul>
+<li>tekstowe</li>
+<li>numeryczne</li>
+<li>graficzne</li>
+<li>inne</li>
+</ul>
+</li>
+<li>wymagany rodzaj transmisji
+<ul>
+<li>przesyłane w czasie rzeczywistym</li>
+<li>nie przesyłane w czasie rzeczywistym</li>
+</ul>
+</li>
+</ol>
+<p><strong>Transmisja</strong> może być przeprowadzona jako:</p>
+<ul>
+<li><em>simplex</em> - dane są nadawane jednostronnie</li>
+<li><em>half duplex</em> - dane mogą być nadawane dwustronnie, ale nie jednocześnie</li>
+<li><em>full duplex</em> - dane mogą być nadawane dwustronnie, również jednocześnie</li>
+</ul>
+<p><strong>Połączenia</strong> dzielą się na:</p>
+<ul>
+<li><em>dedykowane</em> - fizyczne lub logiczne łącze zarezerwowane wyłącznie dla dwóch punktów końcowych, działające w trybie ciągłym</li>
+<li><em>komutowane</em> - połączenie zestawiane "na żądanie", zrywane natychmiast po zakończeniu transmisji</li>
+<li><em>wirtualne</em> - logiczne ścieżki sieci współdzielonej symulujące działanie połączenia dedykowanego</li>
+</ul>
+<hr>
+<h1 id="spanning-tree-protocol">Spanning Tree Protocol </h1>
+<p>Domena kolizyjna to medium współdzielone przez wiele urządzeń. Dawniej kable koncentracyjne, współcześnie sieci bezprzewodowe (pasma).</p>
+<p>Koncentrator - elektronicznie realizowana magistrala</p>
+<p>Bridge (switch) - eliminacja domen kolizyjnych</p>
+<p>Switch wysyła ramkę do portu który ma zapisany odpowiedni <code>destination MAC address</code>. Jeżeli taki port nie zostanie znaleziony, ramka zostaje wysłana do wszystkich portów oprócz źródłowego.</p>
+<hr>
+<h3 id="problemy-pętli-topologicznych">Problemy pętli topologicznych: </h3>
+<ul>
+<li>sztorm rozgłoszeniowy</li>
+<li>duplikacja ramek</li>
+<li>destabilizacja i permanentna zmiana tablicy CAM</li>
+</ul>
+<p>Redundancja poleca na wirtualnym wyłączeniu nadmiarowego połączenia aby zapobiegać pętlom topologicznym.</p>
+<p>PVSTP, czyli Per VLAN Spanning Tree Protocol (kilka połączeń na przełączniku, po jednym na VLAN) wykorzystuje numer VLANu jako <code>extended system ID</code>.</p>
+<h1 id="projektowanie-sieci-komputerowych">Projektowanie sieci komputerowych </h1>
+<p>Podczas projektowania sieci ważnym zagadnieniem jest segmentacja.</p>
+<ul>
+<li>Segmentacja <strong>organizacyjna</strong><br>
+Polega na porządkowaniu infrastruktury sieciowej zgodnie z hierarchią i logiką biznesową. W praktyce oznacza to podział na podsieci przypisywane konkretnym wydziałom.<br>
+<br></li>
+<li>Segmentacja <strong>bezpieczeństwa</strong><br>
+Polega na odseparowaniu od siebie różnych sieci np. urządzeń produkcyjnych, publicznego Wi-Fi i urządzeń IoT od siebie aby zapobiec rozprzestrzenianiu się zagrożeń pomiędzy segmentami.<br>
+<br></li>
+<li>Segmentacja <strong>wydajnościowa</strong><br>
+Polega głównie na ograniczaniu domen rozgłoszeniowych i wykorzystaniu Quality of Service w celu optymalizacji ruchu sieciowego.</li>
+</ul>
+<p>Ważny jest również podział infrastruktury na mniejsze sieci z ustalonymi Access Control List. W praktyce podział ten jest implementowany przy użyciu VLANów (minimalizacja liczby potrzebnych urządzeń fizycznych).</p>
+<p>Przypisywanie portów do VLANów moze odbywać się statycznie lub mobilnie. Mobilne adresowanie przeważnie jest wygodniejsze. Pozwala na przypisywanie do VLANów na podstawie np. adresu mac lub ruchu.</p>
+<p>Bezpieczniejszą opcją są tzw. Authenticated VLAN, jednak wymagają one wcześniejszej konfiguracji każdego z urządzeń.</p>
+<p>Protokół 802.1q pozwala na zachowanie struktury VLANów pomiędzy przełącznikami przy użyciu jednego portu <code>trunk</code>.</p>
+<p>Link Aggregation on Control Protocol pozwala na połączeniu kilku portów fizycznych w jedno logiczne łącze. Jest wykorzystywany do zwiększania przepustowości.</p>
+<p>Korzyści VLAN:</p>
+<ul>
+<li>bezpieczeństwo</li>
+<li>redukcja kosztów</li>
+<li>lepsza wydajność sieci</li>
+<li>zmniejszenie rozmiaru domen rozgłoszeniowych</li>
+<li>poprawa efektywności panelu IT</li>
+</ul>
+<p>W praktyce na jednym przełączniku można stworzyć jednocześnie do 256 VLANów.</p>
+<hr>
+<h1 id="media-transmisyjne">Media transmisyjne </h1>
+<p>Media transmisyjne można podzielić na dwie główne kategorie:</p>
+<ul>
+<li>
+<p><strong>Przewodowe</strong></p>
+<ul>
+<li>Linia napowietrzna</li>
+<li>Kabel miedziany</li>
+<li>Kabel koncentryczny</li>
+<li>Światłowód</li>
+</ul>
+</li>
+<li>
+<p><strong>Bezprzewodowe</strong></p>
+<ul>
+<li>Łącze radiowe</li>
+<li>Łącze podczerwone</li>
+<li>Łącze satelitarne</li>
+<li>Bluetooth</li>
+</ul>
+</li>
+</ul>
+<p>Podstawowe <strong>parametry</strong> medium transmisyjnego:</p>
+<ul>
+<li>
+<p><strong>Szerokość pasma</strong><br>
+Mierzy ilość informacji, która może zostać przeniesiona z jednego miejsca do drugiego w określonym czasie<br>
+<br></p>
+</li>
+<li>
+<p><strong>Przepustowość</strong><br>
+Miara transferu bitów przez medium w określonym czasie<br>
+<br></p>
+</li>
+<li>
+<p><strong>Przepustowość aktywna</strong><br>
+Miara transferu użytecznych danych w określonym czasie. Jest to miara najbardziej interesująca z punktu widzenia użytkownika.</p>
+</li>
+</ul>
+<p>Repeater (wzmacniacz) działa w warstwie fizycznej. Jest urządzeniem aktywnym do wzmacniania sygnałów w sieci.</p>
+<p>Przełącznik (switch) działa w warstwie fizycznej i łącza danych. Operuje na adresach sprzętowych i nie ma informacji z warstwy sieciowej.</p>
+<p>Router działa w warstwie sieciowej.</p>
+<hr>
+<h1 id="protokoły-sieciowe">Protokoły sieciowe </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">UDP</th>
+<th style="text-align:left">TCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Szybki</td>
+<td style="text-align:left">Niezawodny</td>
+</tr>
+<tr>
+<td style="text-align:left">Mały narzut danych (8B datagramu)</td>
+<td style="text-align:left">Duży narzut danych (20B segment)</td>
+</tr>
+<tr>
+<td style="text-align:left">Brak wymaganych potwierdzeń</td>
+<td style="text-align:left">Potwierdzanie danych</td>
+</tr>
+<tr>
+<td style="text-align:left">Brak retransmisji utraconych danych</td>
+<td style="text-align:left">Retransmisja zagubionych danych</td>
+</tr>
+<tr>
+<td style="text-align:left">Dostarcza dane w kolejności w jakiej je otrzymuje</td>
+<td style="text-align:left">Dostarcza dane w prawidłowej kolejności</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="topologie">Topologie </h1>
+<p><strong>Topologia fizyczna</strong> opisuje fizyczną organizację sieci.</p>
+<p><strong>Topologia logiczna</strong> opisuje sposób przesyłania danych po sieci.</p>
+<p>Przykład może tu stanowić sieć o fizycznej topologii gwiazdy na której zbudowana jest logiczna topologia pierścienia.</p>
+<p>Różne modele zapisu topologii:</p>
+<ul>
+<li>Krawędziowa reprezentacja hipersześcianu</li>
+<li>Magistralowa reprezentacja hipersześcianu</li>
+<li>Wielomagistrala</li>
+<li>Magistrala opisana grafem procesor-magistrala-link (PBL)</li>
+</ul>
+<p>Graf liniowy <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">G(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mclose">)</span></span></span></span><br>
+Macierz przyległości (sąsiedztwa) - macierz <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{n\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span><br>
+Macierz incydencji <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">B_{n\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span> - opisuje jakim wierzchołkiem krawędzi jest punkt <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">{</mo><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo fence="true">}</mo></mrow><annotation encoding="application/x-tex">\left\{-1, 0, 1\right\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord">−</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose delimcenter" style="top:0em;">}</span></span></span></span></span>.</p>
+<p><strong>Łańcuch</strong>:</p>
+<ul>
+<li>Stosowana w sieciach rozległych</li>
+<li>Dla ethernet (802.1q i <a href="http://802.id">802.id</a>) maks średnica 7</li>
+<li>Wykorzystywane w połączeniu z MPLS</li>
+</ul>
+<p><strong>Pierścień</strong>:</p>
+<ul>
+<li>Rzadko stosowany LAN</li>
+<li>FDDI - odmiana dla sieci WAN (historyczne)</li>
+<li>Współcześnie stosowana w połączeniu z ERP (Ehternet Ring Protection)</li>
+<li>Topologia wielopierścieniowa - WAN</li>
+</ul>
+<p><strong>Gwiazda</strong>:</p>
+<ul>
+<li>Zastosowanie w LAN</li>
+<li>Mała odporność na uszkodzenia</li>
+<li>Duża "kablożerność"</li>
+</ul>
+<p><strong>Krata</strong>:<br>
+Sieci ortogonalne<br>
+Wykorzystanie technologii WDM, Frame Relay<br>
+Topologie algorytmiczne</p>
+<hr>
+<h1 id="światłowody">Światłowody </h1>
+<p>Prawo załamania (Snelliusa) dotyczy zmian wskaźnika załamania promienia w zależności od kierunku padania światła. Wraz ze zwiększeniem pochyłości kąta padania, kąt załamania promienia wychodzącego zbliża się do wartości granicznej <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>90</mn><mo lspace="0em" rspace="0em">∘</mo></msup></mrow><annotation encoding="application/x-tex">90^{\circ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6741em;"></span><span class="mord">9</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span></span></span></span></span></span></span></span></span></span></span></span>. Po przekroczeniu tej granicy promień wydostaje się z rdzenia włókna.</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>η</mi><mn>1</mn></msub><mi>sin</mi><mo>⁡</mo><msub><mi>α</mi><mn>1</mn></msub><mo>=</mo><msub><mi>η</mi><mn>2</mn></msub><mi>sin</mi><mo>⁡</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\eta_1 \sin \alpha_1 = \eta_2 \sin \alpha_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><p>Współczynnik załamania światła (refrakcji) to wielkość opisująca załamanie fali elektromagnetycznej przy jej przejściu z jednego ośrodka do drugiego. Pozwala on określić kierunek biegu promieni.</p>
+<p>Włókno światłowodowe to szklany cylinder składające się z dwóch struktur szkła kwarcowego - <strong>rdzenia</strong> i <strong>płaszcza</strong>. Struktury te różnią się od siebie współczynnikiem załamania światłą. W rdzeniu współczynnik ten jest większy niż w płaszczu (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>η</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\eta_1 &gt; \eta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>).</p>
+<p>W światłowodach wykorzystuje się <strong>całkowite wewnętrzne odbicie</strong>.<br>
+Różnice między <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\eta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> i <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>η</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\eta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> są bardzo małe (0.04%)</p>
+<p>Bez całkowitego wewnętrznego odbicia propagacja w światłowodzie nie byłaby możliwa - nawet gdyby współczynnik odbicia wynosił <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>99.99</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\approx 99.99\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">99.99%</span></span></span></span> to i tak cała moc uciekłaby po kilku metrach.</p>
+<p>Zmianę współczynnika załamania uzyskuje się poprzez odpowiednie domieszkowanie szkła.</p>
+<hr>
+<p>Apertura numeryczna<br>
+Sinus kąta stożka akceptacji tzn. maksymalny kąt w stosunku do osi rdzenia włókna pod którym światło wprowadzone do włókna nie będzie z niego uciekać (nastąpi całkowite wewnętrzne odbicie)</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sin</mi><mo>⁡</mo><msub><mi>α</mi><mi>A</mi></msub><mo>=</mo><msqrt><mrow><msubsup><mi>η</mi><mn>1</mn><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>η</mi><mn>2</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sin \alpha_A = \sqrt{\eta_1^2 - \eta_2^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8179em;vertical-align:-0.15em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5413em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2987em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959em;"><span style="top:-2.4337em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.0448em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2663em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7959em;"><span style="top:-2.4337em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.0448em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2663em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.2587em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.88em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.88em" viewBox="0 0 400000 1944" preserveAspectRatio="xMinYMin slice"><path d="M983 90
+l0 -0
+c4,-6.7,10,-10,18,-10 H400000v40
+H1013.1s-83.4,268,-264.1,840c-180.7,572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7
+s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744
+c-10,12,-21,25,-33,39s-32,39,-32,39c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30
+c26.7,-32.7,52,-63,76,-91s52,-60,52,-60s208,722,208,722
+c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,-658.5
+c53.7,-170.3,84.5,-266.8,92.5,-289.5z
+M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5413em;"><span></span></span></span></span></span></span></span></span></span><p>Indeks kroku? to długość światła jaką przebywa promień bez odbić wewnętrznych.</p>
+<p>Budowa światłowodu:</p>
+<ul>
+<li><strong>rdzeń szklany</strong> (jednomodowy: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>−</mo><mn>9</mn><mi>μ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">4 - 9 \mu m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mord mathnormal">μ</span><span class="mord mathnormal">m</span></span></span></span>, wielomodowy: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>52.5</mn><mi>μ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">52.5\mu m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">52.5</span><span class="mord mathnormal">μ</span><span class="mord mathnormal">m</span></span></span></span> lub <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>62.5</mn><mi>μ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">62.5\mu m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">62.5</span><span class="mord mathnormal">μ</span><span class="mord mathnormal">m</span></span></span></span>)</li>
+<li><strong>płaszcz</strong> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>125</mn><mi>μ</mi><mi>m</mi><mo>−</mo><mrow><mtext>szeroko</mtext><mover accent="true"><mtext>s</mtext><mo>ˊ</mo></mover><mover accent="true"><mtext>c</mtext><mo>ˊ</mo></mover><mtext>&nbsp;rdzenia</mtext></mrow></mrow><annotation encoding="application/x-tex">125\mu m - \text{szerokość rdzenia}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">125</span><span class="mord mathnormal">μ</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">szeroko</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">s</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">c</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">&nbsp;rdzenia</span></span></span></span></span>)</li>
+<li><strong>zewnętrzne osłony</strong></li>
+</ul>
+<p>Typy: jednomodowy, wielomodowy gradientowy, wielomodowy skokowy</p>
+<p>Światłowód gradientowy <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mo fence="true">(</mo><mi>r</mi><mo fence="true">)</mo></mrow><mo>=</mo><msub><mi>η</mi><mn>1</mn></msub><msqrt><mrow><mn>1</mn><mo>−</mo><mi>d</mi><mo stretchy="false">(</mo><mfrac><mi>r</mi><mi>u</mi></mfrac><msup><mo stretchy="false">)</mo><mi>q</mi></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">n\left(r\right) = \eta_1 \sqrt{1 - d(\frac{r}{u})^q}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.3525em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8875em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0278em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">q</span></span></span></span></span></span></span></span></span></span><span style="top:-2.8475em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.28em" viewBox="0 0 400000 1296" preserveAspectRatio="xMinYMin slice"><path d="M263,681c0.7,0,18,39.7,52,119
+c34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120
+c340,-704.7,510.7,-1060.3,512,-1067
+l0 -0
+c4.7,-7.3,11,-11,19,-11
+H40000v40H1012.3
+s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232
+c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
+s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
+c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
+M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3525em;"><span></span></span></span></span></span></span></span></span></p>
+<p>Światłowód skokowy <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>=</mo><mfrac><mrow><mi>l</mi><mo stretchy="false">(</mo><msub><mi>η</mi><mn>1</mn></msub><mo>−</mo><msub><mi>η</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mi>c</mi></mfrac></mrow><annotation encoding="application/x-tex">\Delta_t = \frac{l(\eta_1 - \eta_2)}{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0197em;">l</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">η</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> - różnica między najdłuższą a najkrótszą drogą</p>
+<hr>
+<h3 id="zalety-światłowodów">Zalety światłowodów </h3>
+<ul>
+<li>Ogromna pojemność informacyjna włókna</li>
+<li>Małe strat, czyli zdolność przesyłania sygnałów na znaczne odległości</li>
+<li>Całkowita niewrażliwość na zakłócenia i przesłuchy elektromagnetyczne</li>
+<li>Mała waga i wymiary</li>
+<li>Bezpieczeństwo pracy (brak iskrzenia)</li>
+<li>Utrudniony (prawie niemożliwy) podsłuch przesyłanych danych</li>
+<li>Względnie niski koszt</li>
+<li>Duża niezawodność (przy poprawnej instalacji)</li>
+</ul>
+<p>Straty w elementach toru światłowodowego:</p>
+<ul>
+<li>Straty absorpcyjne - pochłanianie światła w obszarze struktury światłowodu</li>
+<li>Straty wynikające z rozproszenia energii</li>
+<li>Straty całkowite w elementach toru</li>
+</ul>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mrow><mo fence="true">[</mo><mtext>dB</mtext><mo fence="true">]</mo></mrow><mo>=</mo><mo>−</mo><mn>10</mn><mi>log</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><msub><mi>P</mi><mrow><mi>w</mi><mi>y</mi></mrow></msub><msub><mi>P</mi><mrow><mi>w</mi><mi>e</mi></mrow></msub></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">A \left[\text{dB}\right] = -10 \log \left(\frac{P_{wy}}{P_{we}}\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">[</span><span class="mord text"><span class="mord">dB</span></span><span class="mclose delimcenter" style="top:0em;">]</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord">−</span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0269em;">w</span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0269em;">w</span><span class="mord mathnormal mtight" style="margin-right:0.0359em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span><hr>
+<h3 id="zagrożenia-dla-włókien-światłowodowych">Zagrożenia dla włókien światłowodowych </h3>
+<p>Środowiskowe:</p>
+<ul>
+<li>wilgotność (złącza)</li>
+<li>chemia</li>
+<li>temperatura</li>
+<li>gryzonie</li>
+</ul>
+<p>Mechaniczne:</p>
+<ul>
+<li>zagięcia</li>
+<li>naprężenia</li>
+<li>uderzanie</li>
+<li>skręcanie</li>
+</ul>
+<p>Konsekwencją występowania dyspersji jest poszerzenie impulsu, co ogranicza maksymalną częstotliwość sygnału przesyłanego przez światłowód. Wyróżnia się dyspersje:</p>
+<ul>
+<li>Międzymodową (w światłowodach multimodowych)<br>
+Zależy od kąta padania światła na wejściu do rdzenia, co powoduje iż droga pokonana przez różne fale nie jest jednakowa. W wyniku czego mody docierają po różnym czasie do odbiornika i następuje ich rozmycie. Zjawisko znacznie ogranicza pasmo przenoszenia.</li>
+<li>Materiałową</li>
+<li>Falowodową</li>
+<li>Chromatyczną</li>
+</ul>
+<hr>
+<h3 id="łączenie-światłowodów">Łączenie światłowodów </h3>
+<p><strong>Łącza trwałe</strong> (bezpośrednie)</p>
+<ul>
+<li>
+<p>Łącza mechaniczne<br>
+Polega na mechanicznym połączeniu włókien światłowodu. W tym celu włókna muszą być precyzyjnie ustawione naprzeciw siebie, aby kontakt pomiędzy nimi był dobry. Tłumiennośc w przypadku stosowania łączy tego typu kształtuje się na poziomie <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn><mtext>dB</mtext></mrow><annotation encoding="application/x-tex">0.5 \text{dB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">0.5</span><span class="mord text"><span class="mord">dB</span></span></span></span></span>.<br>
+<br></p>
+</li>
+<li>
+<p>Łącza zgrzewne (spawane)<br>
+Umożliwiają transmisję długodystansową i niemal całkowicie wyparły połączenia mechaniczne. Przy precyzyjnym nastawieniu światłowodów połączenia spawane generują tłumienność na poziomie <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1</mn><mtext>dB</mtext></mrow><annotation encoding="application/x-tex">0.1 \text{dB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">0.1</span><span class="mord text"><span class="mord">dB</span></span></span></span></span>.</p>
+</li>
+</ul>
+<p><strong>Łącza nietrwałe</strong> (rozłączne)</p>
+<ul>
+<li>Połączenia stykowe PC</li>
+<li>Połączenia kątowe ze szczeliną powietrzną</li>
+<li>Połączenia stykowo-kątowe APC</li>
+</ul>
+<hr>
+<p>W wyniku np. absorpcji jonów <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext>OH</mtext><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">\text{OH}^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8446em;"></span><span class="mord"><span class="mord text"><span class="mord">OH</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8446em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span></span></span></span> mogą wystąpić zniekształcenia w tłumienności różnych fal świetlnych. Okna transmisyjne to wybrane pasma monotonicznej tłumienności.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Okno</th>
+<th style="text-align:left">Długość fali</th>
+<th style="text-align:left">Tłumienność</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>I</code></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>850</mn><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\approx 850 \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">850</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn><mfrac><mtext>dB</mtext><mtext>km</mtext></mfrac></mrow><annotation encoding="application/x-tex">0.7 \frac{\text{dB}}{\text{km}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord">0.7</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">km</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">dB</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>II</code></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1310</mn><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\approx 1310 \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1310</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.4</mn><mfrac><mtext>dB</mtext><mtext>km</mtext></mfrac></mrow><annotation encoding="application/x-tex">0.4 \frac{\text{dB}}{\text{km}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord">0.4</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">km</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">dB</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>III</code></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1550</mn><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\approx 1550 \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1550</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.16</mn><mo>−</mo><mn>0.2</mn><mfrac><mtext>dB</mtext><mtext>km</mtext></mfrac></mrow><annotation encoding="application/x-tex">0.16-0.2 \frac{\text{dB}}{\text{km}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0.16</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord">0.2</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">km</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">dB</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>IV</code></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1550</mn><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">\approx 1550 \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1550</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span> (wzmacnianie)</td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.16</mn><mo>−</mo><mn>0.2</mn><mfrac><mtext>dB</mtext><mtext>km</mtext></mfrac></mrow><annotation encoding="application/x-tex">0.16-0.2 \frac{\text{dB}}{\text{km}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0.16</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord">0.2</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">km</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">dB</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>V</code></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1360</mn><mo>−</mo><mn>1460</mn><mi>μ</mi><mtext>m</mtext></mrow><annotation encoding="application/x-tex">1360 - 1460  \mu\text{m}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1360</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1460</span><span class="mord mathnormal">μ</span><span class="mord text"><span class="mord">m</span></span></span></span></span></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mfrac><mtext>dB</mtext><mtext>km</mtext></mfrac></mrow><annotation encoding="application/x-tex">0.2 \frac{\text{dB}}{\text{km}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord">0.2</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">km</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">dB</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>W światłowodach stosuje się TDM / WDM.</p>
+<hr>
+<h1 id="routing">Routing </h1>
+<p>Routing (warstwa sieciowa) obsługuje funkcje związane z kierowaniem pakietu z jednej sieci do drugiej.</p>
+<p>Routery to urządzenia pracujące w warstwie sieci. Wykonują one funkcje:</p>
+<ul>
+<li>marszrutyzacji (trasowania)</li>
+<li>filtracji pakietów</li>
+<li>ochrony kryptograficznej transmisji</li>
+<li>rozszerzonej diagnostyki sieci</li>
+<li>optymalizacji przepływu</li>
+<li>translacji protokołów</li>
+</ul>
+<p>Tablica routingu zawiera skojarzenie pomiędzy adresem IP przeznaczenia a adresem iP routera następnego przejścia.</p>
+<p>Routing IP jest dokonywany na podstawie kolejnych przejść. Router nie zna pełnej trasy do żadnego z punktów przeznaczenia. Routing jest możliwy dzięki przekazywaniu dalej pakietów.</p>
+<p>Polecenie <code>show ip route</code> pokazuje następujące źródła trasy:</p>
+<ul>
+<li><code>L</code> - adres IP interfejsu lokalnego podłączonego bezpośrednio</li>
+<li><code>C</code> - sieć bezpośrednio połączona</li>
+<li><code>S</code> - trasy statyczne konfigurowane ręcznie przez administratora</li>
+<li><code>O</code> - OSPF</li>
+<li><code>D</code> - EIGRP</li>
+</ul>
+<hr>
+<p>Struktura wpisu do tablicy routingu:<br>
+<code>R 172.16.4.0 /28 [120 / 2] via 209.165.200.226, 00:00:12, Serial 10/0/0</code></p>
+<ul>
+<li><code>R</code> - źródło trasy</li>
+<li><code>172.16.4.0 /28</code> - sieć docelowa</li>
+<li><code>[120 / 2]</code> - dystans administracyjny i metryka</li>
+<li><code>via 209.165.200.226</code> - następny przeskok</li>
+<li><code>00:00:12</code> - znacznik czasowy</li>
+<li><code>Serial 10/0/0</code> - interfejs wyjściowy</li>
+</ul>
+<h3 id="brama-sieciowa">Brama sieciowa </h3>
+<ul>
+<li>Router lub przełącznik warstwy 3 może służyć za bramę domyślną</li>
+<li>Cechy bramy domyślnej:
+<ul>
+<li>Musi mieć adres IP w tym samym zakresie co reszta sieci LAN</li>
+<li>Może przyjmować dane z sieci LAN i przesyłać ruch poza tą sieć LAN</li>
+<li>Może kierować do innych sieci</li>
+</ul>
+</li>
+<li>Jeśli urządzenie nie ma bramy domyślnej lub ma złą bramę domyślną, jego ruch nie będzie mógł opuścić sieci LAN</li>
+</ul>
+<h3 id="wielokrotne-trasy">Wielokrotne trasy </h3>
+<p>Istnienie tras wielokrotnych gwarantuje:</p>
+<ul>
+<li>Poprawę niezawodności sieci</li>
+<li>Optymalizację przepływów informacyjnych</li>
+</ul>
+<p>Routing dzieli się na:</p>
+<ul>
+<li>Statyczny</li>
+<li>Dynamiczny
+<ul>
+<li>Wewnętrzny</li>
+<li>Zewnętrzny</li>
+</ul>
+</li>
+</ul>
+<h3 id="routing-statyczny">Routing statyczny </h3>
+<ul>
+<li>Przewidywalny, tzn. trasa po której pakiet jest wysyłany jest dobrze znana i może być kontrolowana</li>
+<li>Łącza nie są dodatkowo obciążone wiadomościami służącymi do routowania</li>
+<li>Łatwy do skonfigurowania w małych sieciach</li>
+<li>Brak skalowalności</li>
+<li>Brak obsługi redundantnych połączeń</li>
+<li>Nie są zdolne do dostosowywania się do dynamicznych zmian w konfiguracji sieci</li>
+</ul>
+<h3 id="routing-dynamiczny">Routing dynamiczny </h3>
+<ul>
+<li>Skalowalny</li>
+<li>Zdolny do dostosowania się do zmian topologi sieci</li>
+<li>Łatwy w konfiguracji - nie popełniamy błędów</li>
+<li>Większy stopień zawiłości działania sieci. Im lepiej protokół reaguje na zmiany w sieci tym bardziej skomplikowany musi być - trudności w implementacji</li>
+</ul>
+<hr>
+<p>Charakterystyka trasy statycznej:</p>
+<ul>
+<li>Musi być skonfigurowana ręcznie</li>
+<li>Musi być ręcznie dostosowywana przez administratora gdy nastąpi zmiana topologii</li>
+<li>Dobra dla małych sieci bez nadmiarowości</li>
+<li>Często używany w połączeniu z protokołem routingu dynamicznego</li>
+</ul>
+<p>Przełączniki warstwy 2 nie mogą przesyłać ruchu między sieciami VLAN bez pomocy routerów.</p>
+<p>Routing między sieciami VLAN realizowany na routerze jest procesem przekazywania ruchu sieciowego z jednej sieci VLAN do innej.</p>
+<p>Rozwiązanie "router na patyku" wykorzystuje różne trasy do routowania między sieciami VLAN.</p>
+<p>W przeszłości</p>
+<ul>
+<li>do routowania między sieciami VLAN używane były fizyczne routery</li>
+<li>każda sieć VLAN była podłączona do innego interfejsu routera</li>
+<li>pakiety przychodziły do routera na jednym interfejsie, były routowana i wychodziły innym interfejsem</li>
+<li>duże sieci z wielką ilością VLAN wymagały wielu portów</li>
+</ul>
+<hr>
+<p>Kryteria oceny tras:</p>
+<ol>
+<li>
+<p>Ilość węzłów pośrednich przechodzonych na trasie pomiędzy nadawcą i odbiorcą<br>
+Wada - "hopy" nie uwzględniają rzeczywistych odległości, przepustowości, czy uszkodzeń łączy.</p>
+</li>
+<li>
+<p>Przepustowość łączy<br>
+Gdy przepustowość wybranej trasy jest większa, zwiększa się również prawdopodobieństwo że pakiet dojdzie do odbiorcy.</p>
+</li>
+<li>
+<p>Cena - wybieramy tańsze łącza (np. w przypadku dzierżawienia)<br>
+Stopa błędu - jeśli łącze jest przeciążone, czyli stopa błędu jest duża to następuje zmiana trasy</p>
+</li>
+</ol>
+<hr>
+<h1 id="normy-okablowania">Normy okablowania </h1>
+<p>Aktualnie wykorzystywane CAT6 i CAT5e (do użytkownika)</p>
+<p>Topologia - struktura hierarchiczna gwiazdy</p>
+<ul>
+<li>Poziom  I - strefa kompleksu</li>
+<li>Poziom II - strefa budynku</li>
+<li>Poziom III</li>
+</ul>
+<p>Typy kabli (nazewnictwo UTP)<br>
+<code>AB / CDE</code></p>
+<ul>
+<li><code>AB</code> - osłona całego kabla</li>
+<li><code>C</code> - osłona pojedynczych par (<code>U/F/S</code>)</li>
+<li><code>DE</code> - twisted pair (<code>TP</code>)</li>
+</ul>
+<hr>
+<h3 id="problemy">Problemy </h3>
+<p>Przesłuch zbliżny (NEXT)<br>
+Sumaryczny przesłuch zbliżny (PowerSum NEXT)<br>
+Crosstalk Cancellation eliminuje NEXT</p>
+<p>Przesłuch zdalny (FEXT)<br>
+Sumaryczny przesłuch zdalny (PowerSum FEXT)</p>
+<p>Zakłócenia z otoczenia (szum tła)</p>
+<hr>
+<h1 id="inne">Inne </h1>
+<h2 id="porty-przełączniki">Porty (przełączniki) </h2>
+<p>Porty w przełącznikach numerowane są jako <code>x/y/z</code>, gdzie:</p>
+<ul>
+<li><code>x</code> oznacza numer chasis (daisy chaining / stosy)</li>
+<li><code>y</code> oznacza numer slotu (np. dla przełączników które mają porty RJ-45 i światłowodowe będą one podzielone na dwa sloty)</li>
+<li><code>z</code> oznacza numer portu</li>
+</ul>
+<p>Przykładowo, dla przełącznika nieznajdującego się w stosie port RJ-45 nr. 7 może mieć numer <code>1/1/7</code>. Jeśli ten sam przełącznik stanie się drugim w stosie to numerem portu może być <code>2/1/7</code>.</p>
+<hr>
+<h2 id="porty-sieciowe">Porty (sieciowe) </h2>
+<h3 id="typy-portów">Typy portów </h3>
+<ul>
+<li>
+<p>Dobrze znane porty (0 - 1023)<br>
+Porty zarezerwowane dla usług i aplikacji (serwery WWW, poczta elektroniczna)<br>
+<br></p>
+</li>
+<li>
+<p>Zarejestrowane porty (1024 - 49151)<br>
+Porty zarezerwowane dla aplikacji i procesów użytkownika. Przeze wszystkim porty używane przez aplikacje i usługi tworzone na małą skalę. Mogą być przypisywane dynamicznie gdy nie są używane jako zasoby serwera<br>
+<br></p>
+</li>
+<li>
+<p>Dynamiczne lub prywatne numery portów (49152 - 65535)<br>
+Porty dynamicznie losowane przez aplikacje klienckie podczas inicjowania połaczeń.</p>
+</li>
+</ul>
+<hr>
+<h3 id="magistrale">Magistrale </h3>
+<p>Kontrola dostępu do medium</p>
+<ul>
+<li>
+<p><code>CSMA / CD</code> (Collision Detection)<br>
+Urządzenia monitorują bieżące występowanie sygnału w medium. Niewystępowanie sygnału oznacza, że medium jest wolne i urządzenie może wysyłać dane. Jeżeli podczas nadania urządzenie wykryje sygnał, który jest nadawany przez inne urządzenie, wszyscy nadający przestają transmitować i spróbują wysłać ramkę po losowym czasie oczekiwania. Tradycyjne postaci Ethernetu używają tej metody.<br>
+<br></p>
+</li>
+<li>
+<p><code>CSMA / CA</code> (Collision Avoidance)<br>
+Urządzenie sprawdza bieżące występowanie sygnału w medium. Kiedy medium jest wolne, urządzenie chcące nadawać wysyła krótką informację że chciałoby użyć medium. Następnie urządzenie wysyła dane. Metoda ta jest używana w sieciach bezprzewodowych 802.11.</p>
+</li>
+</ul>
+<p>Magistrala:</p>
+<ul>
+<li>walka o dostęp</li>
+<li>niska przepustowość</li>
+<li>niska niezawodność</li>
+<li>trudność instalacyjna</li>
+<li>tani koszt budowy i eksploatacji</li>
+<li>zastosowanie w sieciach LAN (historycznie) i radiowych</li>
+</ul>
+<p>Wielomagistrala:</p>
+<ul>
+<li>Możliwość wprowadzenia arbitrów dla bus, multibus i tokenów</li>
+<li>Multibus zwiększa ilość jednocześnie dostępnych kanałów, eliminuje "wąskie gardło"</li>
+<li>Zastosowanie - sieci radiowe</li>
+</ul>
+<hr>
+<h1 id="zadania">Zadania </h1>
+<blockquote>
+<p>Podczas rozwiązywania zadań należy zakładać, że podsieci zaadresowane w poprzednich zadaniach są już niedostępne.</p>
+</blockquote>
+<p>Odpowiedzi powinny być strukturyzowane (np. dla polecenia "Wymień, opisz, scharakteryzuj" odpowiedź powinna zawierać podpunkty np. 1. Topologie, 2. Opis, 3. Charakteryzacja, 4. Fizyczna interpretacja) i odpowiadać na polecenie.</p>
+<p>Odpowiedzi powinny również zawierać informacje na co należy zwrócić uwagę, oraz przykłady zastosowanie nawet jeśli nie jest to zawarte w poleceniu.</p>
+<p>PRZYKŁADOWA ODPOWIEDŹ NA PYTANIE O GWIAZDĘ (fikcyjne pytanie)<br>
+Rysunek schematyczny, wady/zalety (z przykładami), parametry i zastosowanie</p>
+<hr>
+<h3 id="pełne-pytania">Pełne pytania </h3>
+<p>Pełne pytania wymienione podczas ostatnich zajęć z M. Bolanowskim.</p>
+<ul>
+<li>Topologie kabli skrętkowych</li>
+<li>Topologie sieci komputerowych</li>
+<li>Normy 568 A i B (po co się je stosuje)</li>
+<li>Wymień 7 głównych założeń projektowania infrastruktury okablowania miedzianego, podaj przykład fizycznej interpretacji jakiegoś założenia (np. promień zgięcia), kiedy to może zostać "nadużyte" w trakcie instalacji i jaki to może mieć wpływ na funkcjonowanie traktu?</li>
+<li>Co to jest deduplikacja?</li>
+<li>Co to jest cienki klient?</li>
+<li>Redundancja - na poziomie urządzenia i infrastruktury</li>
+<li>Co to jest port SFP, gdzie się go stosuje?</li>
+<li>Na czym polega redundancja N+1?</li>
+<li>Jakie znasz protokoły drzewa rozpinającego? Jakie są stany portów które mogą się w nich pojawić i co oznaczają?</li>
+<li>Jakie sa negatywne zjawiska związane z powstaniem pętli topologicznej?</li>
+<li>Jak zrównoważyć obciążenie z wykorzystaniem drzewa rozpinającego?</li>
+<li>Bridge id, extended bridge id - jak są wybierane, jakie mają znaczenie i kiedy są używane? Jak wygląda proces elekcji bridge id? Jak możemy priorytetem zmieniać bridge id?</li>
+<li>Wady i zalety VLANów, typy, jak się je projektuje i do czego są stosowane, jakie standardy wykorzystujemy? Co to jest łącze trunk?</li>
+<li>Jaka jest korelacja VLANów z STP? Tryby flat, 1x1, MSTP.</li>
+<li>Wymień wszystkie znane Ci topologie i opisz ich wady i zalety.</li>
+<li>Wymień wszystkie znane Ci parametry opisujące sieci komputerowe w ujęciu topologicznym i przedstaw ich fizyczną interpretację.</li>
+<li>Adresacja IP</li>
+</ul>
+<hr>
+<h3 id="urywki-pytań">Urywki pytań </h3>
+<p>Urywki które znalazłem w notatkach, mogą się częściowo pokrywać z pełnymi pytaniami (albo być kompletnie niezrozumiałe).</p>
+<ul>
+<li>Bridge id</li>
+<li>ARP</li>
+<li>Jakie drzewa rozpinające + opisać je</li>
+<li>Pętla topologiczna problemy</li>
+<li>MSTP do równoważenia obciążenia w sieci</li>
+<li>Jakie stany portów dla różnych STP</li>
+<li>Redundancja fizyczna i logiczna</li>
+<li>Czym jest topologia logiczna i fizyczna?</li>
+<li>Sposoby opisu topologii? Parametry + opisać kilka dokładnie z przykładami fizycznymi</li>
+<li>Wyjaśnij czym są dane parametry (np.)</li>
+<li>Wymień znane topologie i opisz kilka (BEZ MAGISTRALI chyba że GPON)</li>
+<li>*Wyjaśnij sieci GPON (spawane w "magistralę" światłowody)</li>
+<li>Parametry kabli + znaczenie fizyczne</li>
+<li>Topologia kabli skrętkowych (inne niż gwiazda)</li>
+<li>Normy RJ A vs B</li>
+<li>7 głównych założen okablowania miedzianego + fizyczna intefpretacja (np. zginanie kabla)</li>
+<li>Deduplikacja, cienki klient definicje</li>
+<li>Redundancja, typy portów (SFP)</li>
+<li>Redundancja N+1 definicja</li>
+<li>STP protokoły, stany portów</li>
+<li>Pętle topologiczne, równoważenie obciążenia</li>
+<li>Bridge ID</li>
+<li>VLANy wady i zalety, typy i standardy</li>
+<li>Tryby STP w kontekście VLAN (np. 802.1q)</li>
+<li>Topologie - wymienić, opisać wady i zalety oraz fizyczną interpretacje</li>
+</ul>
+
+      </div>
+      <div class="md-sidebar-toc"><div class="md-toc">
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#spis-treści" class="md-toc-link">Spis treści</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#zaliczenie" class="md-toc-link">Zaliczenie</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#redundancja" class="md-toc-link">Redundancja</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#model-isoosi" class="md-toc-link">Model ISO/OSI</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#zalety-modelu" class="md-toc-link">Zalety modelu</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-aplikacji" class="md-toc-link">Warstwa aplikacji</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-prezentacji" class="md-toc-link">Warstwa prezentacji</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-sesji" class="md-toc-link">Warstwa sesji</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-transportowa" class="md-toc-link">Warstwa transportowa</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-sieciowa" class="md-toc-link">Warstwa sieciowa</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-łącza-danych" class="md-toc-link">Warstwa łącza danych</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="3">
+  <a href="#podwarstwy-łącza-danych" class="md-toc-link">Podwarstwy łącza danych</a>
+</div>
+</details>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#warstwa-fizyczna" class="md-toc-link">Warstwa fizyczna</a>
+</div>
+</details>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#wstęp-do-adresacji" class="md-toc-link">Wstęp do adresacji</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#adresacja-ipv4" class="md-toc-link">Adresacja IPv4</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#adresacja-ipv6" class="md-toc-link">Adresacja IPv6</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#parametry-sieci" class="md-toc-link">Parametry sieci</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#definicje-pojęć" class="md-toc-link">Definicje pojęć</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#spanning-tree-protocol" class="md-toc-link">Spanning Tree Protocol</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#problemy-pętli-topologicznych" class="md-toc-link">Problemy pętli topologicznych:</a>
+</div>
+</details>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#projektowanie-sieci-komputerowych" class="md-toc-link">Projektowanie sieci komputerowych</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#media-transmisyjne" class="md-toc-link">Media transmisyjne</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#protokoły-sieciowe" class="md-toc-link">Protokoły sieciowe</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#topologie" class="md-toc-link">Topologie</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#światłowody" class="md-toc-link">Światłowody</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#zalety-światłowodów" class="md-toc-link">Zalety światłowodów</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#zagrożenia-dla-włókien-światłowodowych" class="md-toc-link">Zagrożenia dla włókien światłowodowych</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#łączenie-światłowodów" class="md-toc-link">Łączenie światłowodów</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#routing" class="md-toc-link">Routing</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#brama-sieciowa" class="md-toc-link">Brama sieciowa</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#wielokrotne-trasy" class="md-toc-link">Wielokrotne trasy</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#routing-statyczny" class="md-toc-link">Routing statyczny</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#routing-dynamiczny" class="md-toc-link">Routing dynamiczny</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#normy-okablowania" class="md-toc-link">Normy okablowania</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#problemy" class="md-toc-link">Problemy</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#inne" class="md-toc-link">Inne</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#porty-przełączniki" class="md-toc-link">Porty (przełączniki)</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="1">
+  <a href="#porty-sieciowe" class="md-toc-link">Porty (sieciowe)</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#typy-portów" class="md-toc-link">Typy portów</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#magistrale" class="md-toc-link">Magistrale</a>
+</div>
+</details>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#zadania" class="md-toc-link">Zadania</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#pełne-pytania" class="md-toc-link">Pełne pytania</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#urywki-pytań" class="md-toc-link">Urywki pytań</a>
+</div>
+</details>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
